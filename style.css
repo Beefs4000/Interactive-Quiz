@@ -1,0 +1,87 @@
+body {
+    margin: 0; 
+}
+
+
+
+@keyframes incorrect {
+    from {color: red;}
+    to {color: black;}
+}
+
+.incorrect{
+
+    color: black;
+    animation-name: incorrect;
+    animation-duration: 2s;
+
+}
+
+@keyframes correct {
+    from {color: green;}
+    to {color: black;}
+}
+
+.correct{
+    color: black;
+    animation-name: correct;
+    animation-duration: 2s;
+}
+
+.landing-page{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.header-banner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: gray;
+
+}
+
+.start-game{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.img-head{
+    width: 4rem;
+}
+
+.img-start{
+    width: 25rem;
+}
+
+.section-question{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.question-choice {
+    width: 300px;
+   
+}
+
+.question-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    align-content: center;
+}
+
+.hide {
+    display: none; 
+}

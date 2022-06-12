@@ -5,42 +5,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <style>
-        .hide {
-            display: none;
-        }
-    </style>
+    <title>You think you know coding?!</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <!-- Timer -->
-    <header id="header-banner" class="hide">
-        <img src="/assets/images/Code Graphic.png" alt="Coding Icon">
+    <header id="header-banner" class="hide header-banner">
+        <img src="/assets/images/Code Graphic.png" alt="Coding Icon" class="img-head">
         <h3 id="timer"></h3>
 
     </header>
 
     <!-- Landing page -->
-    <section id="landing-page">
+    <section id="landing-page" class="landing-page">
         <h1>So you think you know Coding?!</h1>
-        <img src="/assets/images/Code Graphic.png" alt="Coding Icon">
+        <img src="/assets/images/Code Graphic.png" alt="Coding Icon" class="img-land">
 
     </section>
 
     <!-- Start game button -->
-    <section id="start-button" class="hide">
-        <img src="/assets/images/Code Graphic.png" alt="Coding Icon">
+    <section id="start-button" class="hide start-game">
+        <img src="/assets/images/Code Graphic.png" alt="Coding Icon" class="img-start">
         <button id="start-game">START</button>
     </section>
 
     <!-- question section -->
-    <section id="section-question" class="hide">
+    <section id="section-question" class="hide section-question">
         <!-- title -->
         <h1 id="question-title">Question</h1>
         <!-- Choices -->
-        <ul id="question-choices">
+        <ul id="question-choices" class="question-container">
             <li><button class="question-choice"></button></li>
             <li><button class="question-choice"></button></li>
             <li><button class="question-choice"></button></li>
@@ -77,8 +72,8 @@
     </section>
 
     <!-- Load questions.js before app.js so it has access to all the variables -->
-    <script src="./questions.js"></script>
-    <script src="./app.js"></script>
+    <script src="questions.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>

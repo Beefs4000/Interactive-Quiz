@@ -11,7 +11,7 @@ const questionChoices = document.getElementById('question-choices')
 
 const objectLength = Object.keys(questions).length;
 
-let timeRemaining = 5;
+let timeRemaining = 60;
 let timerId;
 
 // Question
@@ -51,17 +51,21 @@ function generateQuestion(questionIndex) {
         // Add event listener to newly created buttons
         button.addEventListener('click', function (Event){
 
-            // user click on choice
+            // user clicks on choice
 
-            // if user click on correct answer
+            // if user clicks on correct answer
             if(choice.isAnswer){
-            // give feedback correct
-
+            // give feedback if correct
+            choice.isAnswer === true;
+            hTimer.setAttribute('class', 'correct');
+            
             } else {
              // if user click on wrong answer
+             choice.isAnswer === false;
             // deduct timer
             timeRemaining -= 10;
-            // show feedback wrong   
+            // show feedback wrong
+            hTimer.setAttribute('class', 'incorrect');
             }
             // move on to the next question, refer to question index in genQuest function
             // If user click on the final question
@@ -73,6 +77,7 @@ function generateQuestion(questionIndex) {
             }
             
             // move on to the next question
+            
             generateQuestion(nextQuestionIndex);
             
         
@@ -87,7 +92,12 @@ function generateQuestion(questionIndex) {
     }
 }
 
-// hide landing page after 5 seconds on loading
+// function score () {
+//     const q1 = 
+// }
+
+
+// hide landing page after 4 seconds on loading
 window.setTimeout(function () {
     landingPage.classList.add('hide');
 }, 4000);
@@ -169,5 +179,16 @@ function startTimer() {
 
 // Highscore page
 // Generate highscore list
+// const highScoreString = localStorage.getItem(HIGH_SCORES);
+// const highScores = JSON.parse(highScoreString) ?? [];
 
+// function checkHighScore(score) {
+//     const highScores = JSON.parse(localStorage.getItem(HIGH_SCORES)) ?? [];
+//     const lowestScore = highScores[NO_OF_HIGH_SCORES - 1]?.score ?? 0;
+    
+//     if (score > lowestScore) {
+//       saveHighScore(score, highScores); // TODO
+//       showHighScores(); // TODO
+//     }
+//   }
 // if user clicked the back button
